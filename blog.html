@@ -1,165 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>발산 마사지 이벤트 — 블로그 | 브로마사지</title>
-    <meta name="description" content="발산에서 가장 강력한 마사지 이벤트. 약한 스파는 잊어라. 근육을 뚫고 피로를 날리는 진짜 테크닉. 예약은 010-6279-0862. 당신의 몸이 증명할 것이다.">
-    <meta name="keywords" content="발산 마사지, 발산 마사지 이벤트, 발산 근육 마사지, 발산 테라피, 강한 마사지, 마사지 할인, 발산 전신 마사지">
-    <meta name="author" content="BRO MASSAGE">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://t3b05-bs-massage-evt-1.vercel.app/">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <meta property="og:title" content="발산 마사지 이벤트 — 블로그 | 브로마사지">
-    <meta property="og:description" content="발산에서 가장 강력한 마사지 이벤트. 약한 스파는 잊어라. 근육을 뚫고 피로를 날리는 진짜 테크닉. 예약은 010-6279-0862.">
-    <meta property="og:image" content="https://t3b05-bs-massage-evt-1.vercel.app/og-image.jpg">
-    <meta property="og:url" content="https://t3b05-bs-massage-evt-1.vercel.app/blog">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <style>
-        /* ===== RESET & BASE ===== */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 100%; scroll-behavior: smooth; }
-        body { font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-        img { max-width: 100%; height: auto; display: block; }
-        a { color: #fbcb0b; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
-        a:hover { border-bottom-color: #fbcb0b; }
-        ul { list-style: none; }
-        /* ===== TYPOGRAPHY (Bold raw) ===== */
-        h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; letter-spacing: -1px; color: #fbcb0b; }
-        h1 { font-size: 3rem; line-height: 1; margin-bottom: 0.5rem; }
-        h2 { font-size: 2.2rem; line-height: 1.1; margin-bottom: 0.5rem; }
-        h3 { font-size: 1.6rem; line-height: 1.2; margin-bottom: 0.4rem; }
-        p, li, blockquote, .text-block { font-size: 1.1rem; margin-bottom: 0.8rem; }
-        strong { color: #fbcb0b; font-weight: 800; }
-        /* ===== LAYOUT (dense, full bleed) ===== */
-        .brutal-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        .brutal-section { padding: 4rem 0; border-bottom: 3px solid #fbcb0b; }
-        .brutal-card { background: #1a1a1a; border: 2px solid #fbcb0b; padding: 2rem; margin-bottom: 1.5rem; }
-        .brutal-card h3 { margin-top: 0; }
-        .text-block { max-width: 780px; }
-        .flex-row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .btn { display: inline-block; background: #fbcb0b; color: #0a0a0a; font-weight: 800; padding: 0.8rem 2.5rem; border: none; text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem; border-radius: 0; transition: transform 0.2s; }
-        .btn:hover { transform: scale(1.05); background: #fff; border-bottom: none; }
-        /* ===== NAV ===== */
-        nav { position: fixed; top: 0; left: 0; width: 100%; background: #0a0a0a; border-bottom: 3px solid #fbcb0b; padding: 0.6rem 1rem; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
-        nav .logo { font-size: 1.8rem; font-weight: 900; color: #fbcb0b; text-transform: uppercase; letter-spacing: -1px; }
-        nav .logo span { color: #e0e0e0; }
-        nav .nav-links { display: flex; gap: 1.5rem; }
-        nav .nav-links a { font-size: 1rem; font-weight: 700; text-transform: uppercase; color: #e0e0e0; border-bottom: none; padding: 0.3rem 0; }
-        nav .nav-links a:hover { color: #fbcb0b; border-bottom: 2px solid #fbcb0b; }
-        .hamburger-menu { display: none; flex-direction: column; cursor: pointer; }
-        .hamburger-menu span { width: 30px; height: 3px; background: #fbcb0b; margin: 4px 0; }
-        /* ===== HERO ===== */
-        .hero { padding: 9rem 0 5rem; border-bottom: 3px solid #fbcb0b; }
-        .hero h1 { font-size: 5rem; line-height: 0.9; margin-bottom: 1rem; }
-        .hero p { font-size: 1.4rem; max-width: 700px; }
-        /* ===== BLOG ARTICLE ===== */
-        .blog-meta { font-size: 0.9rem; color: #aaa; border-bottom: 1px solid #333; padding-bottom: 1rem; margin-bottom: 2rem; }
-        .blog-meta span { margin-right: 1.5rem; }
-        .blog-content h2 { margin-top: 2.5rem; }
-        .blog-content p { margin-bottom: 1.2rem; line-height: 1.7; }
-        .blog-content blockquote { border-left: 5px solid #fbcb0b; padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #ccc; }
-        .blog-content .cta-box { background: #1a1a1a; border: 2px solid #fbcb0b; padding: 1.5rem; text-align: center; margin: 2rem 0; }
-        .blog-content .cta-box p { margin-bottom: 0.5rem; }
-        /* ===== FOOTER ===== */
-        footer { background: #0a0a0a; border-top: 3px solid #fbcb0b; padding: 2rem 0; text-align: center; }
-        footer p { margin-bottom: 0.3rem; font-size: 0.9rem; }
-        footer .tel-link { font-size: 2rem; font-weight: 900; color: #fbcb0b; }
-        footer .tel-link:hover { color: #fff; }
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.6rem; }
-            .hero h1 { font-size: 2.8rem; }
-            .grid-2, .grid-3 { grid-template-columns: 1fr; }
-            nav .nav-links { display: none; }
-            .hamburger-menu { display: flex; }
-        }
-        /* ===== JSON-LD ===== */
-        .json-ld-localbusiness { display: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>발산 마사지 이벤트 블로그 - 전문가 가이드</title>
+  <meta name="description" content="발산 지역의 최신 마사지 이벤트를 전문가 시각에서 분석하고, 이용 전 체크리스트와 상황별 적합성을 상세히 안내합니다.">
+  <meta name="keywords" content="발산 마사지, 마사지 이벤트, 발산 마사지 블로그, 마사지 체크리스트, 발산 지역 이벤트">
+  <link rel="canonical" href="https://balsan-body-choice.program-school.online/blog.html">
+  <meta property="og:title" content="발산 마사지 이벤트 블로그 - 전문가 가이드">
+  <meta property="og:description" content="발산 지역의 최신 마사지 이벤트를 전문가 시각에서 분석하고, 이용 전 체크리스트와 상황별 적합성을 상세히 안내합니다.">
+  <meta property="og:url" content="https://balsan-body-choice.program-school.online/blog.html">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-    <div class="logo">BRO<span>MASSAGE</span></div>
-    <div class="nav-links">
-        <a href="/">홈</a>
-        <a href="/about">소개</a>
-        <a href="/event">이벤트</a>
-        <a href="/blog">블로그</a>
-        <a href="tel:010-6279-0862">010-6279-0862</a>
+  <!-- 사이드 네비게이션 (공통) -->
+  <aside class="r-side-2zg8">
+    <div class="logo">
+      <a href="/"><img src="/logo.png" alt="발산 바디 선택"></a>
     </div>
-    <div class="hamburger-menu" onclick="alert('메뉴: 010-6279-0862')">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-present">메뉴</label>
+    <nav class="nav-present">
+      <ul>
+        <li><a href="/home">홈</a></li>
+        <li><a href="/guide">가이드</a></li>
+        <li><a href="/events">이벤트</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">연락처</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-<main>
-    <!-- BLOG SECTION -->
-    <section class="brutal-section">
-        <div class="brutal-container">
-            <div style="max-width: 860px; margin: 0 auto;">
-                <h1>블로그</h1>
-                <p class="blog-meta">
-                    <span>작성: 브로 마사지 팀</span>
-                    <span>2025.03.28</span>
-                    <span>카테고리: 진짜 마사지 이야기</span>
-                </p>
+  <!-- 메인 콘텐츠 -->
+  <main class="v-card-blgq">
+    <h1>발산 마사지 이벤트 종합 가이드</h1>
 
-                <article class="blog-content">
-                    <h2>발산 마사지, 왜 약한 스파는 의미가 없는가?</h2>
-                    
-                    <p><strong>너는 지금까지 스파를 믿고 있었다.</strong> 향초 켜고, 부드러운 손길에 몸을 맡기면 피로가 풀릴 거라고. 하지만 현실은 어때? 마사지 받고 나오면 30분도 안 돼서 다시 뻐근함이 돌아오지 않나? 그건 당연하다. 스파는 근육을 건드리지 않으니까.</p>
-
-                    <p>발산 BRO 마사지는 다르다. 우리는 <strong>근육을 뚫는다</strong>. 손가락 하나하나가 압력 포인트를 정확히 찾아내고, 쌓인 젖산을 물리적으로 밀어낸다. 약한 압력은 가짜 안도감일 뿐. 진짜 회복은 고통을 동반한다는 걸 부정하지 않는다. 그리고 그 고통을 이겨낸 후에 찾아오는 <strong>전신의 가벼움</strong>을 너는 경험해야 한다.</p>
-
-                    <h3>우리가 '강한 스타일'만 고집하는 이유</h3>
-                    <p>발산 지역에서 '강한 마사지'를 찾는 사람들은 이미 알고 있다. 일반 스파에서 2시간 받을 돈으로 우리는 1시간 만에 3배 효과를 낸다. 우리의 테크닉은 단순하다. <strong>근막 이완 + 심부 근육 압박 + 림프 순환</strong>. 이 세 가지를 동시에 진행한다. 결과는? 받는 즉시 몸이 달라진다. 어깨가 올라가 있던 높이가 내려가고, 허리의 고정된 통증이 풀린다. 이게 마사지다.</p>
-
-                    <blockquote>“스파는 사치고, BRO 마사지는 치료다. 당신의 몸은 진짜를 원한다.”</blockquote>
-
-                    <h3>발산 MZ 세대가 선택하는 이유</h3>
-                    <p>20대 후반에서 40대 초반. 이 연령대는 가짜에 가장 민감하다. 운동하고, 일하고, 밤새고. 그들의 몸은 이미 망가져 있다. 그런데 약한 스파에 돈 쓰는 건 시간 낭비라는 걸 깨달았다. 그래서 그들은 <strong>발산 BRO 마사지</strong>를 찾는다. 우리는 그들의 기대를 저버리지 않는다. 예약 전에 미리 말한다. “아프면 말씀해 주세요. 하지만 덜 아프게 하지는 않을 겁니다.” 진실을 말하는 게 우리 방식이다.</p>
-
-                    <p>너도 이 고통을 감당할 자신이 있다면 지금 전화해라. <a href="tel:010-6279-0862" style="color:#fbcb0b; font-weight:900;">010-6279-0862</a>. 상담은 3분이면 끝난다. 예약은 당일 가능하다. 오늘 너의 몸을 바꿀 준비가 되었는가?</p>
-
-                    <div class="cta-box">
-                        <p style="font-size:1.3rem;font-weight:800;">발산 마사지 이벤트 진행 중</p>
-                        <p><strong>평일 1시간 7만원 → 5만원</strong> / 주말 1.5시간 12만원 → 8만원</p>
-                        <p>전화 예약 시 추가 10% 할인</p>
-                        <a href="tel:010-6279-0862" class="btn" style="margin-top:0.8rem;">010-6279-0862</a>
-                    </div>
-
-                    <p style="margin-top:2rem;font-size:0.9rem;color:#aaa;">* 본 글은 개인 경험과 전문 테라피스트의 의견을 바탕으로 작성되었습니다. 모든 시술은 개인별로 차이가 있을 수 있습니다.</p>
-                </article>
-            </div>
-        </div>
+    <!-- 히어로 섹션 (토글 가능) -->
+    <section class="v-hero-8ek4">
+      <input type="checkbox" id="hero-toggle">
+      <label for="hero-toggle">이벤트 정보 보기</label>
+      <div class="hero-content">
+        <p>2026년 현재, 발산 지역에서는 다양한 테마와 할인 혜택을 제공하는 마사지 이벤트가 연중 지속적으로 진행되고 있습니다. 본 블로그에서는 이벤트 종류, 참여 조건, 추천 대상, 그리고 실제 이용 전 반드시 확인해야 할 체크리스트를 데이터 기반으로 심층 분석합니다.</p>
+      </div>
     </section>
-</main>
 
-<!-- FOOTER -->
-<footer>
-    <div class="brutal-container">
-        <p style="font-size:0.9rem;">대표: BRO MASSAGE | 발산동 123-45 | 사업자등록번호: 123-45-67890</p>
-        <p><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></p>
-        <p style="font-size:0.8rem;margin-top:0.5rem;">© 2025 BRO MASSAGE. All rights reserved. 강한 마사지는 우리의 방식.</p>
-    </div>
-</footer>
+    <!-- 이벤트 유형 소개 -->
+    <section>
+      <h2>핵심 이벤트 유형</h2>
+      <p>첫 번째 유형은 “시간대 한정 할인”으로, 평일 저녁 18시부터 22시 사이에 예약 시 30% 할인 혜택을 제공합니다. 이 혜택은 일반적인 고정 요금제보다 낮은 비용으로 프리미엄 서비스를 체험할 수 있는 기회를 제공하므로, 직장인 및 저녁 시간에 여유가 있는 고객에게 특히 적합합니다.</p>
+      <p>두 번째 유형은 “패키지 복합 이벤트”입니다. 3회 이상 연속 예약 시 추가 10% 할인 및 무료 아로마 테라피 옵션을 제공하는 복합 패키지는 장기적인 관리가 필요한 고객, 예를 들어 만성 근육통이나 스트레스 관리를 목표로 하는 사람들에게 효과적입니다.</p>
+      <p>세 번째 유형은 “신규 매장 오픈 이벤트”이며, 신규 매장을 오픈하면서 첫 방문 고객에게 전신 마사지 1시간 무료 체험 쿠폰을 지급합니다. 이 경우, 매장 위치와 접근성을 사전에 확인하고, 예약이 필수인 경우가 많으므로 사전 체크가 필요합니다.</p>
+    </section>
 
-<!-- JSON-LD -->
-<script type="application/ld+json" class="json-ld-localbusiness">
-{
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "BRO MASSAGE 발산",
-    "description": "
+    <!-- 이용 전 체크리스트 -->
+    <section>
+      <h2>이용 전 반드시 확인해야 할 체크리스트</h2>
+      <p>① <strong>예약 가능 시간대</strong>: 이벤트마다 적용 가능한 시간대가 다르므로, 본인의 일정과 겹치는지를 먼저 검토합니다. 특히 “시간대 한정 할인”의 경우, 예약이 빠르게 마감될 수 있으니 사전 예약이 권장됩니다.</p>
+      <p>② <strong>전문가 자격증 확인</strong>: 이벤트 참가 마사지는 모든 전문가가 국가공인 자격증을 보유하고 있는지 확인해야 합니다. 해당 정보는 홈페이지 하단의 “전문가 소개” 섹션에서 확인할 수 있습니다.</p>
+      <p>③ <strong>추가 옵션 및 비용</strong>: 무료 아로마 테라피, 스톤 마사지 등 추가 옵션이 포함되는 경우, 추가 비용 발생 여부와 사전 결제 방식을 명확히 파악합니다.</p>
+      <p>④ <strong>위생 및 안전 프로토콜</strong>: 코로나19 이후 강화된 위생 관리 지침을 운영하고 있는지, 개인 보호 장비 착용 여부 및 소독 절차를 확인합니다.</p>
+    </section>
+
+    <!-- 상황별 추천 기준 -->
+    <section>
+      <h2>상황별 이벤트 추천 기준</h2>
+      <p>① <strong>시간이 부족한 직장인</strong> – “시간대 한정 할인”을 선택하면 짧은 시간 안에 고급 서비스를 저렴하게 이용할 수 있습니다. 이때, 사전 예약을 통해 원하는 테라피스트를 지정하는 것이 좋습니다.</p>
+      <p>② <strong>지속적인 관리가 필요한 만성 통증 환자</strong> – “패키지 복합 이벤트”를 활용해 장기적인 치료 계획을 세우고, 추가적인 아로마 테라피를 통한 심리적 안정을 도모합니다.</p>
+      <p>③ <strong>새로운 장소 탐색을 즐기는 고객</strong> – “신규 매장 오픈 이벤트”는 다양한 테라피 환경을 경험할 수 있는 기회이며, 매장 주변 교통편과 주차 가능 여부를 미리 확인하면 보다 원활한 이용이 가능합니다.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <h3>Q1. 이벤트 할인은 다른 쿠폰과 중복 사용이 가능한가요?</h3>
+      <p>대부분의 이벤트는 “단일 할인 적용 정책”을 따르며, 다른 쿠폰과 중복 사용이 제한됩니다. 단, 특정 기간에만 진행되는 프로모션은 별도 안내가 있을 경우에만 중복 적용이 가능합니다.</p>
+
+      <h3>Q2. 예약 취소 시 환불 정책은 어떻게 되나요?</h3>
+      <p>예약 24시간 이전에는 전액 환불이 가능하지만, 24시간 이내 취소 시에는 50% 환불 정책이 적용됩니다. 이벤트마다 다소 차이가 있을 수 있으니, 상세 페이지에 명시된 환불 규정을 반드시 확인하십시오.</p>
+
+      <h3>Q3. 첫 방문 시 어떤 정보를 준비해야 하나요?</h3>
+      <p>신분증 및 기존 마사지 이용 기록(있다면)과 함께 현재 건강 상태(예: 고혈압, 심장 질환 등)를 알려주시면 맞춤형 테라피를 제공받을 수 있습니다. 또한, 알레르기 유발 물질이 있는 경우 사전에 전달하는 것이 바람직합니다.</p>
+    </section>
+
+    <!-- 마무리 멘트 -->
+    <section>
+      <h2>결론</h2>
+      <p>발산 지역의 마사지 이벤트는 다양한 고객층의 니즈를 충족시키기 위해 설계되었습니다. 본 가이드를 통해 각 이벤트의 특징과 적용 조건을 정확히 이해하고, 개인 상황에 맞는 최적의 선택을 하시기 바랍니다. 데이터 기반의 체크리스트와 상황별 추천 기준을 활용한다면, 보다 효율적이고 만족스러운 마사지 경험을 얻을 수 있을 것입니다.</p>
+      <p>추가적인 최신 이벤트 정보는 정기적으로 업데이트되는 <a href="/events">이벤트 페이지</a>를 참고하시고, 궁금한 점이 있으면 언제든 <a href="/contact">문의하기</a>를 이용해 주세요.</p>
+    </section>
+  </main>
+
 </body>
 </html>
